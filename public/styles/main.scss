@@ -1,0 +1,145 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    background: #fff;
+    cursor: default;
+    height: 100%;
+    position: relative;
+    margin: 0;
+}
+
+li, ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: $color_blue;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: $color_blue;
+}
+
+::-webkit-scrollbar-track{
+    background: $color_input;
+}
+
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1260px;
+    position: relative;
+}
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+}
+
+.d-flex{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.d-none{
+    display: none;
+}
+
+.d-block{
+    display: block;
+}
+
+.d-iblock{
+    display: inline-block;
+}
+
+.align-items-center{
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.justify-content-center{
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.justify-content-between{
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: $color_black;
+}
+
+.btn{
+    height: 46px;
+    background: #009EE2;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color_white;
+    text-align: center;
+    outline: 0;
+    border: 0;
+    &:hover{
+        cursor: pointer;
+        background: $bg_btn_hover;
+    }
+}
+
+.breadcrumb{
+    margin: 0 0 40px;
+    li{
+        display: inline-block;
+        margin-right: 20px;
+        position: relative;
+        &:before{
+            position: absolute;
+            left: -19px;
+            top: 4px;
+            content: "";
+            border: solid #CDCDCD;
+            border-width: 0 2px 2px 0;
+            padding: 4px;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        &:first-child::before{
+            display: none;
+        }
+        span{
+            font-size: 14px;
+            line-height: 16px;
+            color: #6B9AC6;
+        }
+        &:last-child{
+            span{
+                color: grey;
+            }
+        }
+    }
+}

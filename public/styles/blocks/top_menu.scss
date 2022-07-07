@@ -1,0 +1,90 @@
+.logo{
+    color: $color_black;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+#top_menu{
+    margin: 32px 0 17px;
+    padding-bottom: 27px;
+    border-bottom: 1px solid $border_form;
+    form{
+        width: 670px;
+        position: relative;
+        input{
+            width: 595px;
+            height: 46px;
+            border: 1px solid #CDCDCD;
+            border-radius: 5px;
+            color: $color_input;
+            font-size: 16px;
+            padding: 15px 49px;
+            outline: 0;
+            &:focus{
+                border: 1px solid $color_blue;
+            }
+        }
+        &:before{
+            position: absolute;
+            top: 16px;
+            left: 20px;
+            content: '';
+            width: 14px;
+            height: 14px;
+            background: url("../../img/search_icon.svg") no-repeat center center;
+        }
+
+        button{
+            width: 101px;
+            line-height: 46px;
+            margin-left: -30px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    #heart_lidza{
+        cursor: pointer;
+        &:hover, &.active{
+            fill: red;
+            path{
+                stroke: red;
+            }
+        }
+    }
+
+    .user_menu, #basket{
+        svg{
+            margin-right: 9px;
+        }
+    }
+
+    #basket, .user_menu{
+        a, span{
+            font-size: 16px;
+            line-height: 19px;
+            color: #777777;
+            &:hover{
+                color: $color_black;
+            }
+        }
+    }
+
+    #basket{
+        cursor: pointer;
+        &:hover{
+            svg path{
+                stroke: $color_black;
+            }
+            span{
+                color: $color_black;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+footer{
+    margin: 120px 0 0;
+    border-top: 1px solid $border_form;
+    .f-content{
+        margin: 30px auto;
+    }
+    p{
+        margin: 0 0 10px;
+        font-size: 13px;
+        line-height: 14px;
+        color: #959595;
+    }
+    a{
+        font-size: 14px;
+        line-height: 179.69%;
+        color: #6B9AC6;
+        &:hover{
+            color: $color_left_menu_hover
+        }
+    }
+}

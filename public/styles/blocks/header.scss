@@ -1,0 +1,57 @@
+#tabs{
+    background: $bg_nav;
+    height: 50px;
+    .container{
+        height: 100%;
+    }
+
+    .current-city{
+        svg{
+            margin-right: 6px;
+        }
+    }
+
+    a{
+        color: $color_menu;
+        &.phone{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: $color_black;
+            margin-right: 38px;
+        }
+        &:hover{
+            color: $color_left_menu_hover;
+        }
+    }
+
+    #lang{
+        width: 65px;
+        position: relative;
+        a{
+            &.active{
+                color: $color_black;
+                font-weight: 500;
+            }
+        }
+        &:after{
+            position: absolute;
+            top: 0;
+            left: calc(50% - 1px);
+            content: "";
+            width: 2px;
+            height: 100%;
+            background: $color_menu;
+            opacity: .3;
+        }
+    }
+
+    .menu{
+        li{
+            margin-right: 25px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}

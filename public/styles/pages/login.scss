@@ -1,0 +1,166 @@
+@import "../variables";
+@import "../fonts/fonts";
+@import "../main";
+@import "../blocks/header";
+@import "../blocks/top_menu";
+
+#auth{
+    padding: 61px 68px 76px;
+    border: 1px solid $border_form;
+    border-radius: 16px;
+    width: 618px;
+    overflow: hidden;
+    margin: 0 auto;
+    h1{
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        color: $color_black;
+        margin: 0 0 49px;
+    }
+    .select-status{
+        position: relative;
+        &:after{
+            border: solid #959595;
+            border-width: 0 1px 1px 0;
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+            position: absolute;
+            right: 20px;
+            top: 22px;
+            content: "";
+            width: 14px;
+            height: 14px;
+            -webkit-transition: .5s;
+            -moz-transition: .5s;
+            -o-transition: .5s;
+            transition: .5s;
+        }
+        &.open{
+            &:after{
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+    }
+    form{
+        .inp-auth, select{
+            border: 1px solid #ECECEC;
+            border-radius: 4px;
+            width: 100%;
+            height: 55px;
+            font-size: 16px;
+            line-height: 19px;
+            color: #404040;
+            padding: 18px 55px 18px 30px;
+            outline: 0;
+            margin: 0 0 15px;
+            &:focus, &:active{
+                border: 1px solid $color_blue;
+            }
+
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: #959595;
+            }
+            &::-moz-placeholder { /* Firefox 19+ */
+                color: #959595;
+            }
+            &:-ms-input-placeholder { /* IE 10+ */
+                color: #959595;
+            }
+            &:-moz-placeholder { /* Firefox 18- */
+                color: #959595;
+            }
+        }
+        select{
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            &:focus{
+                border: 1px solid #EBEBEB;
+                border-radius: 4px 4px 0 0;
+                box-shadow: 0px 4px 17px 3px rgba(0, 0, 0, 0.1);
+            }
+        }
+        .remember-block{
+            margin: 15px 0 28px;
+            a{
+                color: $color_blue;
+                &:hover{
+                    color: $color_left_menu_hover;
+                }
+            }
+            .remember-cont label{
+                cursor: pointer;
+                &:hover{
+                    color: #545454;
+                }
+            }
+
+            label{
+                color: $color_input;
+                margin-left: 3px;
+            }
+        }
+        button{
+            border: 1px solid $color_blue;
+            background: transparent;
+            width: 100%;
+            color: $color_blue;
+            &:hover{
+                background: $color_blue;
+                color: $color_white;
+            }
+        }
+        .register_btn{
+            margin: 34px 0 0;
+            a{
+                color: $color_blue;
+                &:hover{
+                    color: $color_left_menu_hover;
+                }
+            }
+        }
+        .password-block{
+            position: relative;
+            .password-toggle{
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 55px;
+                width: 55px;
+                svg{
+                    cursor: pointer;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -moz-transform: translate(-50%, -50%);
+                    -o-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    &:hover{
+                        path{
+                            fill: black;
+                        }
+                    }
+                }
+                .pass-show{
+                    display: none;
+                }
+                &.show{
+                    .pass-show{
+                        display: block;
+                    }
+                    .pass-hide{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@import "../blocks/footer";

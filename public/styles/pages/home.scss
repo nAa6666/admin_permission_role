@@ -1,0 +1,13 @@
+@import "../variables";
+@import "../fonts/fonts";
+@import "../main";
+@import "../blocks/header";
+@import "../blocks/top_menu";
+@import "../blocks/left_menu";
+
+#top_menu{
+    margin: 32px 0 25px;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
